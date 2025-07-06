@@ -35,9 +35,9 @@ You must first enable Vivaldi's experimental feature that allows loading custom 
 
 #### Step 2: Download and Place the CSS File
 
-1.  Download the `custom.css` file from this repository.
+1.  Download the `main.css` file from this repository.
 2.  Create a folder on your computer in a safe, permanent location (e.g., `Documents/Vivaldi CSS`).
-3.  Place the downloaded `custom.css` file inside this new folder.
+3.  Place the downloaded `main.css` file inside this new folder.
 
 #### Step 3: Tell Vivaldi Where to Find Your CSS
 
@@ -55,7 +55,7 @@ Close and reopen Vivaldi completely for the changes to take effect. Your UI shou
 
 ## How to Customize the Panel Effect
 
-This script is designed to be easily configurable. You can switch between a fully transparent panel and a glass blur panel by editing the `custom.css` file.
+This script is designed to be easily configurable. You can switch between a fully transparent panel and a glass blur panel by editing the `main.css` file.
 
 **The rule is simple: Uncomment the style you want, and make sure the other one is commented out.** A block of code is "commented out" when it is surrounded by `/*` and `*/`.
 
@@ -127,4 +127,4 @@ To give the panel a frosted glass effect, make sure the code looks like this:
 }
 ```
 
-After editing the `custom.css` file, **save it and restart Vivaldi** to see your changes.
+After editing the `main.css` file, **save it and restart Vivaldi** to see your changes.
