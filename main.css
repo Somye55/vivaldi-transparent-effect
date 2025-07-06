@@ -1,0 +1,66 @@
+/*
+ * ===================================================================
+ *   VIVALDI UI CUSTOMIZATION
+ *   - Address Bar & Footer are always transparent.
+ *   - Choose one style for the side panel below (transparent by default). 
+ * ===================================================================
+ */
+
+/* 
+  SECTION 1: BASE STYLES (ALWAYS ACTIVE)
+  This code makes the Address Bar and Footer transparent and prepares
+  the panel for one of the custom styles below. Do not edit this section.
+*/
+.mainbar,
+#footer {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Hides the original theme's complex glass layers to allow our styles to work */
+.mainbar::before, .mainbar::after,
+#footer::before, #footer::after,
+#panels-container::before, #panels-container::after,
+.panel-group::before, .panel-group::after {
+    display: none !important;
+}
+
+
+/* 
+   --- OPTION 1: FULLY TRANSPARENT PANEL ---
+   Uncomment this block to make the side panel completely see-through.
+*/
+
+#panels-container,
+.panel-group {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+
+/* 
+   --- OPTION 2: TRANSLUCENT GLASS PANEL ---
+   Uncomment this block to give the side panel a frosted glass effect.
+*/
+
+/* #panels-container,
+.panel-group {
+    /* 
+     * A very subtle, nearly-transparent background.
+     * This creates the "material" for the glass without adding color.
+     * The last value (0.1) is the opacity.
+    */
+    background-color: rgba(255, 255, 255, 0.1) !important;
+
+    /* The Blur: This blurs the content behind the panel. */
+    backdrop-filter: blur(40px) !important;
+
+    /* The Edge: A subtle border to define the glass. */
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+
+    /* Clean Up: Remove any leftover shadows. */
+    box-shadow: none !important;
+} */
