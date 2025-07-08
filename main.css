@@ -1,18 +1,20 @@
 /*
  * ===================================================================
  *   VIVALDI UI CUSTOMIZATION
- *   - Address Bar & Footer are always transparent.
+ *   - Address Bar, Bookmark Bar, & Footer are always transparent.
+ *   - Individual bookmark items are transparent with a subtle hover.
  *   - Choose one style for the side panel below (transparent by default). 
  * ===================================================================
  */
 
 /* 
   SECTION 1: BASE STYLES (ALWAYS ACTIVE)
-  This code makes the Address Bar and Footer transparent and prepares
-  the panel for one of the custom styles below. Do not edit this section.
+  This code makes the Address Bar, Bookmark Bar, and Footer transparent
+  and prepares the panel for one of the custom styles below.
 */
 .mainbar,
-#footer {
+#footer,
+.bookmark-bar {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -24,6 +26,53 @@
 #panels-container::before, #panels-container::after,
 .panel-group::before, .panel-group::after {
     display: none !important;
+}
+
+/* 
+  SECTION 2: (Initial attempt - can be kept or removed)
+  This makes each button on the bookmark bar transparent.
+*/
+.bookmark-bar .bookmark-bar-button {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Adds a subtle white highlight on hover for visual feedback */
+.bookmark-bar .bookmark-bar-button:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+
+/* 
+  SECTION 3: TRANSPARENT UI ITEMS & UNIFIED HOVER (REVISED)
+  This section makes bookmark buttons and panel list items transparent,
+  and applies a single, consistent hover effect to all of them.
+*/
+
+/* Step 1: Make all target items transparent by default */
+.bookmark-bar button,
+#panels .vivaldi-tree .tree-row, /* For Bookmarks/Notes panel lists */
+#panels .history-item,           /* For History panel list */
+#panels .download-item          /* For Downloads panel list */
+ {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Step 2: Hide the vertical lines between bookmarks */
+.bookmark-bar-separator {
+    display: none !important;
+}
+
+/* Step 3: Apply the same hover highlight to all items */
+.bookmark-bar button:hover,
+#panels .vivaldi-tree .tree-row:hover,
+#panels .history-item:hover,
+#panels .download-item:hover,
+#panels .button-toolbar:hover /* For buttons at the top of a panel */
+ {
+    background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 
