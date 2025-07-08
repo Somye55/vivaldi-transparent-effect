@@ -113,3 +113,12 @@
     /* Clean Up: Remove any leftover shadows. */
     box-shadow: none !important;
 } */
+
+.tab:not(:hover) .close {
+    opacity: 0 !important;
+}
+
+.tab:hover .close {
+    opacity: 1 !important;
+}
+
